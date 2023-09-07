@@ -1,0 +1,52 @@
+
+.portCard >img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}  
+.portCardBody{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
+} 
+.portButton{
+    display: flex;
+    gap: 1rem;
+} 
+.portCard{
+    position: relative;
+    background-color:var(--color-bg-variant) ;
+    border-radius: 2rem;
+    padding: 1.3rem;
+    border: 1px solid transparent;
+   
+    cursor: default;
+    transition: var(--transition);
+}
+.portCard:hover{
+    background-color:transparent;
+    border: 1px solid var( --color-primary);
+}
+.portCard>h3{
+    margin: 1.2rem 0 2rem;
+}
+.portButton{
+    margin-bottom: 1rem;
+}
+.portfolio-img{
+    object-fit: cover;
+}
+@media screen and (max-width:1024px){
+    .portCardBody{
+        grid-template-columns:repeat(2,1fr);
+        gap: 1.2rem;
+    }    
+}
+@media screen and (max-width:600px){
+    .portCardBody{
+        grid-template-columns:repeat(1,1fr);
+        gap: 1rem;
+    }  
+}
