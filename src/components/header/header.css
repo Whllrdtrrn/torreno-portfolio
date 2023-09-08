@@ -7,7 +7,18 @@ header{
     height: 100%;
     position: relative;
 }
-
+.cta button:first-child{
+    background-color: transparent;
+}
+.cta button:first-child:hover{
+    background-color:var( --color-primary);
+}
+.cta a:hover{
+    background-color:transparent;
+    border: 1px solid var( --color-primary);
+    color: white;
+    transition: 0.5s;
+}
 .cta{
     margin-top: 2.5rem;
     display: flex;

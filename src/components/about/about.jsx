@@ -1,14 +1,13 @@
 import React from 'react'
 import ME from '../../assets/ww.jpg'
-import {FaAward} from 'react-icons/fa'
-import {FiUsers} from 'react-icons/fi'
-import {VscRootFolderOpened} from 'react-icons/vsc'
+// import {FaAward} from 'react-icons/fa'
+// import {FiUsers} from 'react-icons/fi'
+// import {VscRootFolderOpened} from 'react-icons/vsc'
 import './about.css'
 
 const About = () => {
     return(
         <section id='about'>
-            
             <h5>Get To Know</h5>
             <h2>About Me</h2>
 
@@ -21,7 +20,7 @@ const About = () => {
                 </div>
 
                 <div className="aboutContent">
-                    <div className="aboutCards">
+                    {/*<div className="aboutCards">
 
                         <article className='aboutCard'>
                             <FaAward className='aboutIcon' />
@@ -41,8 +40,7 @@ const About = () => {
                             <h5>Project</h5>
                             <small>0 Completed</small>
                         </article>
-                    </div>
-
+                    </div>*/}
                     <p>
                          I want to be a web developer with an amazing ability to develop
                          websites that are both functional and beautiful.
@@ -52,7 +50,7 @@ const About = () => {
                          I am looking for an opportunity to use my skills and experience to become a good programmer.
                     </p>
 
-                    <a href="" className='btn btn-primary'>Let's Talk</a>
+                    <button className='btn btn-primary'>Let's Talk</button>
                 </div>
             </div>
         </section>

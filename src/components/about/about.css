@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
+    align-items: center;
 }
 .aboutMe{
     width: 100%;
@@ -49,14 +50,15 @@
     margin-bottom: 1rem;
 
 }
-.aboutContent p ,.aboutContent a{
+.aboutContent p ,.aboutContent button{
     margin-top: 1rem;
     text-align: justify;
 
 }
-.aboutCard:hover{
+.aboutCard:hover, .aboutContent button:hover{
     background:transparent;
     border-color: var(--color-primary);
+    color: white;
 }
 @media screen and (max-width:1024px){
 
@@ -87,7 +89,7 @@
         margin: 1.5rem;
         text-align: center;
     }
-    .aboutContent>a{   
+    .aboutContent>button{   
         text-align: center;
     }
     .about_container{

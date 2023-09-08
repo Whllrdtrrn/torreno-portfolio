@@ -22,6 +22,13 @@ const experience = () => {
                             <article className='exDetails'>
                                 <BsFillPatchCheckFill className='exIcon' />
                                 <div>
+                                <h4>Laravel</h4>
+                                <small className='text-light'>Intermediate</small>
+                                </div>
+                            </article>
+                            <article className='exDetails'>
+                                <BsFillPatchCheckFill className='exIcon' />
+                                <div>
                                 <h4>CSS</h4>
                                 <small className='text-light'>Intermediate</small>
                                 </div>

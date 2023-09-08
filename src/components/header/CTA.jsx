@@ -1,12 +1,11 @@
 import React from "react";
-import CV from '../../assets/Togapic.jpg'
-
+import './header.css';
 
 const CTA = () =>{
         // Function will execute on click of button
         const onButtonClick = () => {
             // using Java Script method to get PDF file
-            fetch('Torreno-CV-2023.pdf').then(response => {
+            fetch('Torreno_CV.pdf').then(response => {
                 response.blob().then(blob => {
                     // Creating new object of PDF file
                     const fileURL = window.URL.createObjectURL(blob);
@@ -20,7 +19,7 @@ const CTA = () =>{
         }
     return(
         <div className="cta">
-            <a onClick={onButtonClick} className='btn'>Download CV</a>
+            <button onClick={onButtonClick} className='btn'>Download CV</button>
             <a href="#contact" className="btn btn-primary">Let's Talk</a>
         </div>
     )

@@ -40,10 +40,12 @@ const portfolio = () => {
                         return(
                     <article key={id} className="portCard">
                         <img className='portfolio-img' src= {img} alt="" />
-                        <h3>{title}</h3>
-                        <div className="portButton">
-                            <a href={git} className='btn'>Github</a>
-                            <a href={drib} className='btn btn-primary'>Live Demo</a>
+                        <div>
+                            <h3>{title}</h3>
+                            <div className="portButton">
+                                <a href={git} className='btn'>Github</a>
+                                {/*<a href={drib} className='btn btn-primary'>Live Demo</a>*/}
+                            </div>
                         </div>
                     </article>
                         )

@@ -31,7 +31,7 @@ footer a{
     gap: 1rem;
     margin-bottom: 4rem;
 }
-.socialFooter a{
+.socialFooter p{
     background: var(--color-bg);
     color: white;
     padding: 0.8rem;
@@ -41,7 +41,7 @@ footer a{
 
 
 }
-.socialFooter a:hover{
+.socialFooter p:hover{
     background: transparent;
     color: var(--color-bg);
     border-color: var(--color-bg);
