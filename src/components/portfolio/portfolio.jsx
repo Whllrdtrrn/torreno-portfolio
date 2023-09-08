@@ -1,6 +1,6 @@
 import React from 'react'
 import IMG  from '../../assets/Railway.JPG'
-import Bethel  from '../../assets/Bethel-Baptist-church-website.JPG'
+import CrudPhp  from '../../assets/crud-php.jpg'
 import Monitoring  from '../../assets/monitoring.JPG'
 import './portfolio.css'
 
@@ -16,14 +16,14 @@ const data =[
         id:2,
         img:IMG,
         title:'The Railway Ticketing system ',
-        git:'https://github.com/Whllrdtrrn/Finals.git',
+        git:'https://github.com/Whllrdtrrn/The-RailWay.git',
         drib:'https://dribbble.com/whllrdtrrn25?onboarding=true'
     },
     {
         id:3,
-        img:Bethel,
-        title:'Bethel Baptist Church ',
-        git:'https://github.com/Whllrdtrrn/Finals.git',
+        img:CrudPhp,
+        title:'PHP Crud',
+        git:'https://github.com/Whllrdtrrn/React-portfolio.git',
         drib:'https://dribbble.com/whllrdtrrn25?onboarding=true'
     }
 ]
