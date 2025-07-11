@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8d757c7a.css",
+    "main.js": "/static/js/main.fbdadc5e.js",
+    "static/media/ww.jpg": "/static/media/ww.3012ea5fedd7ce690bbd.jpg",
+    "static/media/Railway.JPG": "/static/media/Railway.fcbf54e52bf7e8866b0b.JPG",
+    "static/media/crud-php.jpg": "/static/media/crud-php.29a45c0194f3b217bb80.jpg",
+    "static/media/monitoring.JPG": "/static/media/monitoring.2481d87f920a6abcd178.JPG",
+    "static/media/Togapic.jpg": "/static/media/Togapic.b7060579506b7664b393.jpg",
+    "index.html": "/index.html",
+    "main.8d757c7a.css.map": "/static/css/main.8d757c7a.css.map",
+    "main.fbdadc5e.js.map": "/static/js/main.fbdadc5e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d757c7a.css",
+    "static/js/main.fbdadc5e.js"
+  ]
+}
