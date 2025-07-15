@@ -35,7 +35,7 @@ const data = [
     img: Adb,
     title: "Asian Development Bank (ADB)",
     description: "ADB is a leading multilateral development bank promoting sustainable and inclusive growth in Asia and the Pacific. Founded in 1966, it works with 69 members to deliver innovative solutions, build quality infrastructure, and protect the environment.",
-    git: "https://github.com/Whllrdtrrn/React-portfolio.git",
+    git: "https://github.com/Whllrdtrrn/torreno-portfolio.git",
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
@@ -94,7 +94,7 @@ const data = [
     img: CrudPhp,
     title: "PHP Crud",
     description: "Full CRUD operations application built with PHP and MySQL.",
-    git: "https://github.com/Whllrdtrrn/React-portfolio.git",
+    git: "https://github.com/Whllrdtrrn/torreno-portfolio.git",
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
 ];
