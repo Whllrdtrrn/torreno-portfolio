@@ -31,7 +31,7 @@ const App = () => {
                 options={{
                     background: {
                         color: {
-                            value: "#1e1e2e", // Keep your dark background
+                            value: "#1e1e2e",
                         },
                     },
                     fpsLimit: 120,
@@ -59,18 +59,17 @@ const App = () => {
                     },
                     particles: {
                         color: {
-                            // Colors that match your portfolio theme
                             value: ["#4A90E2", "#5BA7F7", "#6BB6FF", "#7B68EE", "#9370DB", "#00CED1"],
                         },
                         links: {
-                            color: "#4A90E2", // Blue color that matches your "Let's Talk" button
+                            color: "#4A90E2", 
                             distance: 150,
                             enable: true,
-                            opacity: 0.3, // Reduced opacity for subtle effect
+                            opacity: 0.3, 
                             width: 1,
                             triangles: {
                                 enable: true,
-                                opacity: 0.05, // Very subtle triangles
+                                opacity: 0.05, 
                             },
                         },
                         move: {
@@ -80,7 +79,7 @@ const App = () => {
                                 default: "bounce",
                             },
                             random: true,
-                            speed: 1, // Slower, more elegant movement
+                            speed: 1, 
                             straight: false,
                         },
                         number: {
@@ -88,10 +87,9 @@ const App = () => {
                                 enable: true,
                                 area: 800,
                             },
-                            value: 80, // Fewer particles for cleaner look
-                        },
+                            value: 80, 
                         opacity: {
-                            value: 0.4, // More subtle particles
+                            value: 0.4, 
                             animation: {
                                 enable: true,
                                 speed: 1,
@@ -100,8 +98,7 @@ const App = () => {
                             },
                         },
                         shape: {
-                            type: ["circle"], // Keep circles for clean geometric look
-                            options: {
+                            type: ["circle"],
                                 polygon: {
                                     sides: 6,
                                 },
@@ -111,7 +108,7 @@ const App = () => {
                             },
                         },
                         size: {
-                            value: { min: 1, max: 4 }, // Slightly smaller particles
+                            value: { min: 1, max: 4 }, 
                             animation: {
                                 enable: true,
                                 speed: 2,
@@ -122,7 +119,7 @@ const App = () => {
                         stroke: {
                             width: 1,
                             color: {
-                                value: ["#4A90E2"], // Blue stroke to match theme
+                                value: ["#4A90E2"], 
                             },
                         },
                         rotate: {
@@ -133,7 +130,7 @@ const App = () => {
                             direction: "random",
                             animation: {
                                 enable: true,
-                                speed: 3, // Slower rotation for elegance
+                                speed: 3, 
                                 sync: false,
                             },
                         },
