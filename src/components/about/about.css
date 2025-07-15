@@ -9,7 +9,7 @@
     gap: 15%;
     align-items: center;
 }
-.aboutMe{
+/*.aboutMe{
     width: 100%;
     aspect-ratio: 1/1;
 
@@ -18,13 +18,17 @@
 
     display: grid;
     place-items: center;
-}
+}*/
 .aboutMe img{
     width: 100%;
+    object-position: 0 10%;
+    object-fit: cover;
     aspect-ratio: 1/1;
+    border-radius: 1rem;
+    border: 1px solid #4db5ff;
 }
 
-.aboutImage{   
+/*.aboutImage{   
       
     border-radius: 2rem;
     overflow: hidden;
@@ -34,7 +38,7 @@
 }
 .aboutImage:hover{
     transform: rotate(0);
-}
+}*/
 .aboutCard{
     background: var(--color-bg);
     border: 1px solid transparent;

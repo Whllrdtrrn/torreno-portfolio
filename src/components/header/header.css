@@ -58,14 +58,12 @@ header{
 .me img{
     border-radius: 1rem;
     border:1px solid #4db5ff;
-    object-fit: cover;
     width: 22rem;
     height: 100%;
     position: absolute;
     left: calc(50% - 11rem);
-
-    /* border-radius: 12rem; */
-
+    object-fit: cover;
+    object-position: 0 23%;
 }
 @media screen and (max-width:1024px){
     header{
