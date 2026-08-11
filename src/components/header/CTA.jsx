@@ -1,21 +1,22 @@
 import React from "react";
 import './header.css';
 
+// PUBLIC_URL resolves to the `homepage` base path ("/torreno-portfolio"), so
+// this works both on the dev server and on GitHub Pages. A plain download link
+// also avoids the fetch/blob route, which silently saved the SPA fallback
+// index.html as a .pdf whenever the path resolved wrong.
+const CV_URL = `${process.env.PUBLIC_URL}/Torreno_CV.pdf`;
+
 const CTA = () =>{
-        const onButtonClick = () => {
-            fetch('Torreno_CV.pdf').then(response => {
-                response.blob().then(blob => {
-                    const fileURL = window.URL.createObjectURL(blob);
-                    let alink = document.createElement('a');
-                    alink.href = fileURL;
-                    alink.download = 'Torreno-CV-2023.pdf';
-                    alink.click();
-                })
-            })
-        }
     return(
         <div className="cta">
-            <button onClick={onButtonClick} className='btn'>Download CV</button>
+            <a
+                href={CV_URL}
+                className='btn'
+                download="Whil-Lourd-Torreno-CV.pdf"
+            >
+                Download CV
+            </a>
             <a href="#contact" className="btn btn-primary">Let's Talk</a>
         </div>
     )

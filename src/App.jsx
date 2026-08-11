@@ -1,6 +1,8 @@
 import React, { useCallback } from 'react'
 import Particles from "react-tsparticles"
 import { loadSlim } from "tsparticles-slim"
+import useScrollReveal from './hooks/useScrollReveal'
+import Preloader from './components/preloader/Preloader'
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 import About from './components/about/about'
@@ -12,6 +14,8 @@ import Contact from './components/contact/contact'
 import Footer from './components/footer/footer'
 
 const App = () => {
+    useScrollReveal()
+
     const particlesInit = useCallback(async engine => {
         console.log(engine)
         await loadSlim(engine)
@@ -23,6 +27,8 @@ const App = () => {
 
     return (
         <>
+            <Preloader/>
+
             {/* TSParticles Background */}
             <Particles
                 id="tsparticles"

@@ -1,0 +1,95 @@
+<!--
+  EmailJS template body — paste into:
+    Dashboard > Email Templates > "Contact Us" > Content tab > Edit Content
+
+  Variables sent by src/components/contact/contact.jsx:
+    {{name}} / {{from_name}}   - sender's full name
+    {{email}} / {{reply_to}}   - sender's email address
+    {{message}}               - the message body
+
+  Kept email-client safe on purpose: table layout, inline styles only,
+  no external images, no <style> block, 600px max width.
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f5f7;padding:24px 12px;font-family:Helvetica,Arial,sans-serif;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background-color:#ffffff;border:1px solid #e1e4e8;border-radius:6px;overflow:hidden;">
+
+        <!-- Header -->
+        <tr>
+          <td style="background-color:#1e1e2e;padding:20px 28px;">
+            <p style="margin:0;font-size:16px;font-weight:600;color:#ffffff;letter-spacing:0.3px;">
+              New Portfolio Enquiry
+            </p>
+            <p style="margin:4px 0 0;font-size:13px;color:#a9b1c2;">
+              Submitted through the contact form at whllrdtrrn.github.io
+            </p>
+          </td>
+        </tr>
+
+        <!-- Sender details -->
+        <tr>
+          <td style="padding:28px 28px 8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="90" style="padding:0 0 12px;font-size:12px;text-transform:uppercase;letter-spacing:0.6px;color:#8a94a6;vertical-align:top;">
+                  Name
+                </td>
+                <td style="padding:0 0 12px;font-size:15px;color:#1e1e2e;font-weight:600;">
+                  {{name}}
+                </td>
+              </tr>
+              <tr>
+                <td width="90" style="padding:0 0 12px;font-size:12px;text-transform:uppercase;letter-spacing:0.6px;color:#8a94a6;vertical-align:top;">
+                  Email
+                </td>
+                <td style="padding:0 0 12px;font-size:15px;">
+                  <a href="mailto:{{email}}" style="color:#4a90e2;text-decoration:none;">{{email}}</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Divider -->
+        <tr>
+          <td style="padding:0 28px;">
+            <div style="height:1px;background-color:#e1e4e8;font-size:0;line-height:0;">&nbsp;</div>
+          </td>
+        </tr>
+
+        <!-- Message -->
+        <tr>
+          <td style="padding:20px 28px 4px;">
+            <p style="margin:0 0 10px;font-size:12px;text-transform:uppercase;letter-spacing:0.6px;color:#8a94a6;">
+              Message
+            </p>
+            <!-- white-space:pre-wrap keeps the sender's line breaks intact -->
+            <div style="margin:0;font-size:15px;line-height:1.6;color:#2f3542;white-space:pre-wrap;">{{message}}</div>
+          </td>
+        </tr>
+
+        <!-- Reply button -->
+        <tr>
+          <td style="padding:24px 28px 28px;">
+            <a href="mailto:{{email}}?subject=Re:%20Your%20message%20via%20my%20portfolio"
+               style="display:inline-block;background-color:#4a90e2;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none;padding:11px 22px;border-radius:4px;">
+              Reply to {{name}}
+            </a>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background-color:#fafbfc;border-top:1px solid #e1e4e8;padding:16px 28px;">
+            <p style="margin:0;font-size:12px;line-height:1.5;color:#8a94a6;">
+              This is an automated notification from your portfolio contact form.
+              Replying to this email will reach the sender directly.
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>

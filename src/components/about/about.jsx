@@ -20,17 +20,19 @@ const About = () => {
 
         <div className="aboutContent">
           <p>
-            Web Developer with 3+ years of experience building modern,
-            responsive web applications and content management systems. I
-            specialize in Vue.js, Nuxt 3, React, and Laravel, with expertise in
-            CMS development and integration.
+            Fullstack Developer with 4+ years of experience building modern,
+            responsive web applications, APIs, and content management systems. I
+            specialize in React, Vue.js, Nuxt 3, and Tailwind CSS on the
+            frontend, and Laravel, Express.js, and Node.js with MySQL and
+            PostgreSQL on the backend.
             <br></br>
             <br></br>
-            I've successfully delivered multiple projects, including
-            international e-commerce platforms, corporate web applications, and
-            custom CMS solutions. My approach combines technical expertise with
-            creative problem-solving to build solutions that are both functional
-            and beautiful.
+            I've successfully delivered multiple projects, including a full-stack
+            pet platform with Stripe payments and real-time chat, corporate web
+            applications for property and banking clients, and custom CMS
+            solutions. My approach combines technical expertise with creative
+            problem-solving to build solutions that are both functional and
+            beautiful.
             <br></br>
             <br></br>
             When I'm not coding, I'm learning new technologies, contributing to

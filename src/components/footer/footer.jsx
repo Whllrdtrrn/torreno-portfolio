@@ -1,7 +1,8 @@
 import React from 'react'
+import {AiFillGithub} from 'react-icons/ai'
+import {AiFillLinkedin} from 'react-icons/ai'
+import {AiFillBehanceSquare} from 'react-icons/ai'
 import {AiFillFacebook} from 'react-icons/ai'
-import {AiFillInstagram} from 'react-icons/ai'
-import {AiFillTwitterSquare} from 'react-icons/ai'
 import './footer.css'
 
 const footer = () => {
@@ -19,9 +20,10 @@ const footer = () => {
                     <li><a href="#contact" className='footerItem'>Contact</a></li>
                 </ul>
                 <div className="socialFooter">
-                    <p><AiFillFacebook /></p>
-                    <p><AiFillInstagram /></p>
-                    <p><AiFillTwitterSquare /></p>
+                    <a href="https://github.com/Whllrdtrrn" target="_blank" rel="noopener noreferrer"><AiFillGithub /></a>
+                    <a href="https://www.linkedin.com/in/whillourd-torreno-74429527b" target="_blank" rel="noopener noreferrer"><AiFillLinkedin /></a>
+                    <a href="https://www.behance.net/whilloutorreno/projects" target="_blank" rel="noopener noreferrer"><AiFillBehanceSquare /></a>
+                    <a href="https://www.facebook.com/whllrdtrrn/" target="_blank" rel="noopener noreferrer"><AiFillFacebook /></a>
                 </div>
                 <div className="footerCopy">
                     <small>&copy; WHLLRDTRRN Portfolio. All rights reserved.</small>

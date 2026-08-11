@@ -47,8 +47,78 @@
     color: var(--color-primary);
 }
 
+.exTimelineContainer{
+    margin-top: 4rem;
+}
+.exTimelineTitle{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--color-primary);
+}
+.exTimeline{
+    display: grid;
+    gap: 1.5rem;
+}
+.exTimelineItem{
+    background-color: var(--color-bg);
+    padding: 2rem 2.4rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    border-left: 3px solid var(--color-primary);
+    transition: var(--transition);
+}
+.exTimelineItem:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    border-left: 3px solid var(--color-primary);
+    cursor: default;
+}
+.exTimelinePeriod{
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+.exTimelineItem h5,
+.exEducationItem h5{
+    margin-bottom: 1rem;
+}
+.exTimelineList{
+    display: grid;
+    gap: 0.8rem;
+}
+.exTimelineList li{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.exTimelineList li .exIcon{
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+.exTimelineList p{
+    font-size: 0.95rem;
+}
+.exEducation{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+}
+.exEducationItem{
+    background-color: var(--color-bg);
+    padding: 1.8rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.exEducationItem:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    cursor: default;
+}
+
 @media screen and (max-width:1024px){
-  
+
     .exContainer{
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -61,6 +131,9 @@
     .exDetails{
         padding: 1rem;
     }
+    .exEducation{
+        grid-template-columns: 1fr;
+    }
 }
 @media screen and (max-width:600px){
     .exContainer{
@@ -71,5 +144,10 @@
         width: 100%;
         padding: 1rem 1.5rem;
     }
-  
+    .exTimelineItem{
+        padding: 1.5rem;
+    }
+    .exEducationItem{
+        padding: 1.2rem 1.5rem;
+    }
 }

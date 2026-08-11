@@ -9,12 +9,22 @@ import Cli from "../../assets/Cli-home.png";
 import AboitizLand from "../../assets/AboitizLand.png";
 import Aev from "../../assets/Aev.png";
 import Suntrust from "../../assets/Suntrust.png";
+import Petora from "../../assets/petora.png";
 
 import "./portfolio.css";
 
 const data = [
   {
     id: 1,
+    img: Petora,
+    title: "Petora — Full-Stack Pet Platform",
+    description:
+      "A full-stack pet platform built with React 18, Vite, and Tailwind CSS on the frontend, and Express.js with Prisma ORM and PostgreSQL on the backend. Includes a marketplace, vet booking, pet hotel reservations, an adoption system, community feed, and events. Stripe powers checkout sessions, payment intents, subscription billing, marketplace commissions, and webhook handling, while Socket.io drives real-time chat.",
+    git: "https://github.com/Whllrdtrrn",
+    drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
+  },
+  {
+    id: 2,
     img: Slmc,
     title: `St. Luke's Medical Center (SLMC)`,
     description:
@@ -23,7 +33,7 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 2,
+    id: 3,
     img: Megaworld,
     title: "Megaworld",
     description: "Megaworld, founded by Dr. Andrew L. Tan in 1989, develops high-end residential and commercial properties. It pioneered the live-work-play township concept in the Philippines, with projects nationwide from Pampanga to Davao.",
@@ -31,7 +41,7 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 3,
+    id: 4,
     img: Adb,
     title: "Asian Development Bank (ADB)",
     description: "ADB is a leading multilateral development bank promoting sustainable and inclusive growth in Asia and the Pacific. Founded in 1966, it works with 69 members to deliver innovative solutions, build quality infrastructure, and protect the environment.",
@@ -39,7 +49,7 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 4,
+    id: 5,
     img: Cli,
     title: "Cebu Landmasters, Inc. (CLI)",
     description: "Cebu Landmasters, Inc. (CLI) is a leading Visayas and Mindanao developer specializing in residential, commercial, and township projects. Founded in 2003, CLI is known for its strong customer focus and commitment to community.",
@@ -47,7 +57,7 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 5,
+    id: 6,
     img: AboitizLand,
     title: "Aboitiz Land",
     description: "Aboitiz Land, the real estate arm of the Aboitiz Group, was founded in 1994. Known for well-planned, high-quality communities, it pioneered projects like North Town Homes in Cebu and Seafront Residences in Batangas. Expanding across Luzon and Visayas, Aboitiz Land continues to innovate to meet growing residential needs.",
@@ -55,7 +65,7 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 6,
+    id: 7,
     img: Aev,
     title: "Aboitiz Equity Ventures Inc. (​​​​​AEV)",
     description: `Aboitiz Equity Ventures Inc. (PSE: AEV) is the public holding company of the Aboitiz Group with major investments in power, banking and financial services, food, infrastructure, land, and data science and artificial intelligence (DSAI).`,
@@ -63,7 +73,7 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 7,
+    id: 8,
     img: Suntrust,
     title: "Suntrust Properties Inc.",
     description: `Suntrust Properties, Inc. (SPI), a wholly-owned subsidiary of Megaworld, has been developing residential communities across Luzon, Visayas, and Mindanao since 1997. With Stateland, Inc., it brings over 65 years of combined expertise in delivering quality homes to Filipino families.`,
@@ -71,7 +81,8 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 8,
+    id: 9,
+    hidden: true,
     img: Monitoring,
     title:
       "Implementation of K-means Algorithm on Vaccimo: An Adverse Side Effect Monitoring System for Covid-19 Vaccine",
@@ -81,7 +92,8 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 9,
+    id: 10,
+    hidden: true,
     img: IMG,
     title: "The Railway Ticketing System",
     description:
@@ -90,7 +102,7 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
   {
-    id: 10,
+    id: 11,
     img: CrudPhp,
     title: "PHP Crud",
     description: "Full CRUD operations application built with PHP and MySQL.",
@@ -98,6 +110,10 @@ const data = [
     drib: "https://dribbble.com/whllrdtrrn25?onboarding=true",
   },
 ];
+
+// Entries flagged `hidden` stay in the data but are kept off the grid.
+// Delete the flag to bring one back.
+const visibleProjects = data.filter(project => !project.hidden);
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -116,7 +132,7 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
       <div className="container portContainer">
         <div className="portCardBody">
-          {data.map(project => {
+          {visibleProjects.map(project => {
             const {id, img, title, git, drib} = project;
             return (
               <article

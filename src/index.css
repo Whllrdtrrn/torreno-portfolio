@@ -110,3 +110,27 @@ a:hover{
     }
 }
 
+
+/* ============ scroll reveal ============
+   Applied by src/hooks/useScrollReveal.js. The `reveal` class is added from
+   JS, so without scripting the page renders fully visible rather than blank. */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.revealVisible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
