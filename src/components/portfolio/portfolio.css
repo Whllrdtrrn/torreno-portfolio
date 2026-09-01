@@ -3,7 +3,7 @@
     background: var(--color-bg-alt);
 }
 
-/* ---- section header ---- */
+/* ---- header ---- */
 .portHeader {
     text-align: center;
     margin-bottom: 3.5rem;
@@ -16,45 +16,18 @@
 .portSubtext {
     color: var(--color-text-light);
     font-size: 1rem;
-    max-width: 460px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
-/* ---- card grid ---- */
-.portCardBody {
+/* ---- 2-column grid ---- */
+.portGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
-/* ---- featured card spans full width ---- */
-.portCardFeatured {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-}
-.portCardFeatured .portfolio-img-container {
-    aspect-ratio: auto;
-    height: 100%;
-    min-height: 320px;
-    margin: 0;
-    border-radius: var(--radius-xl) 0 0 var(--radius-xl);
-}
-.portCardFeatured .portfolio-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2.5rem;
-}
-.portCardFeatured .portfolio-content h3 {
-    font-size: 1.6rem;
-}
-.portCardFeatured .portfolio-subtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-/* ---- base card ---- */
+/* ---- card ---- */
 .portCard {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
@@ -62,6 +35,8 @@
     overflow: hidden;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
 }
 .portCard:hover {
     transform: translateY(-6px);
@@ -70,84 +45,81 @@
 }
 
 /* ---- image area ---- */
-.portfolio-img-container {
-    position: relative;
-    background: #f2f2f2;
-    margin: 0.6rem;
-    border-radius: calc(var(--radius-xl) - 4px);
+.portImgWrap {
+    width: 100%;
+    aspect-ratio: 16/9;
     overflow: hidden;
-    aspect-ratio: 16/10;
+    background: #111;
 }
-.portfolio-img {
+.portImgWrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.portCard:hover .portfolio-img {
+.portCard:hover .portImgWrap img {
     transform: scale(1.04);
 }
 
-/* ---- text area ---- */
-.portfolio-content {
-    padding: 1.2rem 1.4rem 1.6rem;
+/* ---- body ---- */
+.portBody {
+    padding: 1.8rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
-.portfolio-tag {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--color-primary);
-    background: var(--color-primary-dim);
-    padding: 0.25rem 0.7rem;
-    border-radius: 2rem;
-    margin-bottom: 0.7rem;
-}
-.portfolio-content h3 {
+.portTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--color-white);
-    font-size: 1.15rem;
-    font-weight: 600;
+    margin-bottom: 0.6rem;
     line-height: 1.3;
-    margin-bottom: 0.25rem;
 }
-.portfolio-subtitle {
-    font-size: 0.88rem;
-    color: var(--color-text-light);
-    margin-bottom: 1rem;
-    line-height: 1.5;
+.portDesc {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex: 1;
 }
-.portfolio-actions {
+
+/* ---- footer: tags + visit ---- */
+.portFooter {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
-.portfolio-visit {
-    font-size: 0.85rem;
+.portTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.portTag {
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--color-text-light);
-    transition: color 0.3s ease;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    padding: 0.3rem 0.75rem;
+    border-radius: 2rem;
+    transition: var(--transition);
     white-space: nowrap;
 }
-.portfolio-visit:hover {
-    color: var(--color-primary);
+.portCard:hover .portTag {
+    border-color: rgba(255, 255, 255, 0.18);
 }
-.portfolio-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
+.portVisit {
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--color-white);
-    transition: color 0.3s ease, gap 0.3s ease;
-}
-.portfolio-link span {
-    transition: transform 0.3s ease;
-}
-.portCard:hover .portfolio-link {
     color: var(--color-primary);
+    white-space: nowrap;
+    transition: var(--transition);
 }
-.portCard:hover .portfolio-link span {
-    transform: translateX(4px);
+.portVisit:hover {
+    color: var(--color-white);
 }
 
 /* ============ Modal ============ */
@@ -215,12 +187,7 @@
     color: var(--color-white);
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.3rem;
-}
-.modal-subtitle {
-    color: var(--color-text-light);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 .modal-info p {
     color: var(--color-text);
@@ -230,27 +197,18 @@
 
 /* ============ Responsive ============ */
 @media screen and (max-width: 1024px) {
-    .portCardBody {
-        grid-template-columns: repeat(2, 1fr);
+    .portGrid {
+        gap: 1.5rem;
     }
-    .portCardFeatured {
-        grid-template-columns: 1fr;
+    .portBody {
+        padding: 1.5rem;
     }
-    .portCardFeatured .portfolio-img-container {
-        min-height: auto;
-        aspect-ratio: 16/9;
-        margin: 0.6rem;
-        border-radius: calc(var(--radius-xl) - 4px);
-    }
-    .portCardFeatured .portfolio-content {
-        padding: 1.2rem 1.4rem 1.6rem;
-    }
-    .portCardFeatured .portfolio-content h3 {
+    .portTitle {
         font-size: 1.15rem;
     }
 }
-@media screen and (max-width: 600px) {
-    .portCardBody {
+@media screen and (max-width: 768px) {
+    .portGrid {
         grid-template-columns: 1fr;
     }
     .modal-info {

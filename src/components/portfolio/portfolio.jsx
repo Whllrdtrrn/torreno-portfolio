@@ -11,128 +11,126 @@ import Aev from "../../assets/Aev.png";
 import Suntrust from "../../assets/Suntrust.png";
 import Petora from "../../assets/petora.png";
 import Robinson from "../../assets/robinson.png";
-
+import Snaboitiz from "../../assets/snaboitiz.png";
 
 import "./portfolio.css";
+
+
 
 const data = [
   {
     id: 1,
     img: Petora,
     title: "Petora",
-    subtitle: "Full-Stack Pet Platform",
-    tag: "React · Express · PostgreSQL",
-    link: "https://www.petora.com.ph/",
     description:
-      "A full-stack pet platform built with React 18, Vite, and Tailwind CSS on the frontend, and Express.js with Prisma ORM and PostgreSQL on the backend. Includes a marketplace, vet booking, pet hotel reservations, an adoption system, community feed, and events. Stripe powers checkout sessions, payment intents, subscription billing, marketplace commissions, and webhook handling, while Socket.io drives real-time chat.",
-    /* featured: true, */
+      "A full-stack pet platform with marketplace, vet booking, pet hotel reservations, adoption system, community feed, and real-time chat. Powered by Stripe payments and Socket.io.",
+    categories: ["Pet Platform"],
+    link: "https://www.petora.com.ph/",
   },
   {
     id: 12,
     img: Robinson,
     title: "Robinsons Department Store",
-    subtitle: "Custom Website",
-    tag: "Laravel · Nuxt · Tailwind",
-    link: "https://robinsonsdepartmentstore.com.ph",
     description:
-      "A digital flagship for Robinsons Department Store, one of the Philippines' most recognized retail chains. The website was redesigned to enhance product discovery, promotions visibility, and branch information for millions of monthly shoppers.",
+      "A digital flagship for one of the Philippines' most recognized retail chains. Redesigned to enhance product discovery, promotions visibility, and branch information.",
+    categories: ["Retail", "Custom Website"],
+    link: "https://robinsonsdepartmentstore.com.ph",
   },
   {
     id: 2,
     img: Slmc,
     title: "St. Luke's Medical Center",
-    subtitle: "Healthcare Website",
-    tag: "Nuxt · Laravel · Tailwind",
     description:
-      "St. Luke's Medical Center (SLMC) is a leading healthcare institution in the Philippines, known for world-class medical services, advanced technology, and highly skilled specialists, with hospitals in Quezon City and Bonifacio Global City.",
+      "Corporate website for a leading healthcare institution in the Philippines, known for world-class medical services and advanced technology.",
+    categories: ["Healthcare"],
   },
   {
     id: 3,
     img: Megaworld,
     title: "Megaworld",
-    subtitle: "Real Estate Website",
-    tag: "Nuxt · Laravel · Tailwind",
-    link: "https://www.megaworldcorp.com/",
     description:
-      "Megaworld, founded by Dr. Andrew L. Tan in 1989, develops high-end residential and commercial properties. It pioneered the live-work-play township concept in the Philippines, with projects nationwide from Pampanga to Davao.",
+      "Website for one of the Philippines' largest real estate developers. Pioneered the live-work-play township concept with projects nationwide.",
+    categories: ["Real Estate"],
+    link: "https://www.megaworldcorp.com/",
   },
   {
     id: 4,
     img: Adb,
     title: "Asian Development Bank",
-    subtitle: "Financial Institution Website",
-    tag: "Nuxt · Laravel · Tailwind",
     description:
-      "ADB is a leading multilateral development bank promoting sustainable and inclusive growth in Asia and the Pacific. Founded in 1966, it works with 69 members to deliver innovative solutions, build quality infrastructure, and protect the environment.",
+      "Website for a leading multilateral development bank promoting sustainable and inclusive growth in Asia and the Pacific.",
+    categories: ["Finance"],
   },
   {
     id: 5,
     img: Cli,
     title: "Cebu Landmasters, Inc.",
-    subtitle: "Real Estate Website",
-    tag: "Nuxt · Laravel · Tailwind",
-    link: "https://www.cebulandmasters.com",
     description:
-      "Cebu Landmasters, Inc. (CLI) is a leading Visayas and Mindanao developer specializing in residential, commercial, and township projects. Founded in 2003, CLI is known for its strong customer focus and commitment to community.",
+      "Corporate site for a leading Visayas and Mindanao developer specializing in residential, commercial, and township projects.",
+    categories: ["Real Estate"],
+    link: "https://www.cebulandmasters.com",
   },
   {
     id: 6,
     img: AboitizLand,
     title: "Aboitiz Land",
-    subtitle: "Real Estate Website",
-    tag: "Nuxt · Laravel · Tailwind",
-    link: "https://www.aboitizland.com",
     description:
-      "Aboitiz Land, the real estate arm of the Aboitiz Group, was founded in 1994. Known for well-planned, high-quality communities, it pioneered projects like North Town Homes in Cebu and Seafront Residences in Batangas.",
+      "Website for the real estate arm of the Aboitiz Group, known for well-planned, high-quality communities across Luzon and Visayas.",
+    categories: ["Real Estate"],
+    link: "https://www.aboitizland.com",
   },
   {
     id: 7,
     img: Aev,
     title: "Aboitiz Equity Ventures",
-    subtitle: "Conglomerate Website",
-    tag: "Nuxt · Laravel · Tailwind",
     description:
-      "Aboitiz Equity Ventures Inc. (PSE: AEV) is the public holding company of the Aboitiz Group with major investments in power, banking and financial services, food, infrastructure, land, and data science and artificial intelligence (DSAI).",
+      "Corporate site for the public holding company of the Aboitiz Group with investments in power, banking, food, infrastructure, and DSAI.",
+    categories: ["Conglomerate"],
+  },
+  {
+    id: 13,
+    img: Snaboitiz, // TODO: replace with SN Aboitiz Power screenshot (src/assets/snaboitiz.png)
+    title: "SN Aboitiz Power",
+    description:
+      "A corporate digital presence for SN Aboitiz Power, a joint venture between SN Power and Aboitiz Power. The website communicates the company's commitment to renewable hydropower energy and its operations across the Philippines.",
+    categories: ["Energy & Power"],
+    link: "https://www.snaboitiz.com/",
   },
   {
     id: 8,
     img: Suntrust,
     title: "Suntrust Properties Inc.",
-    subtitle: "Real Estate Website",
-    tag: "Nuxt · Laravel · Tailwind",
-    link: "https://www.suntrust.com.ph",
     description:
-      "Suntrust Properties, Inc. (SPI), a wholly-owned subsidiary of Megaworld, has been developing residential communities across Luzon, Visayas, and Mindanao since 1997.",
+      "Website for a Megaworld subsidiary developing residential communities across Luzon, Visayas, and Mindanao since 1997.",
+    categories: ["Real Estate"],
+    link: "https://www.suntrust.com.ph",
   },
   {
     id: 9,
     hidden: true,
     img: Monitoring,
     title: "Vaccimo",
-    subtitle: "K-means Monitoring System",
-    tag: "Python · Machine Learning",
     description:
       "Machine learning application for monitoring vaccine side effects using K-means clustering.",
+    categories: ["Machine Learning"],
   },
   {
     id: 10,
     hidden: true,
     img: IMG,
     title: "The Railway",
-    subtitle: "Ticketing System",
-    tag: "PHP · MySQL",
     description:
       "Online ticketing system for railway transportation with booking management.",
+    categories: ["Web App"],
   },
   {
     id: 11,
     hidden: true,
     img: CrudPhp,
     title: "PHP CRUD",
-    subtitle: "Full CRUD Application",
-    tag: "PHP · MySQL",
     description:
       "Full CRUD operations application built with PHP and MySQL.",
+    categories: ["Web App"],
   },
 ];
 
@@ -152,32 +150,34 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="portCardBody">
+        <div className="portGrid">
           {visibleProjects.map(project => (
             <article
               key={project.id}
-              className={`portCard ${project.featured ? "portCardFeatured" : ""}`}
+              className="portCard"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="portfolio-img-container">
-                <img className="portfolio-img" src={project.img} alt={project.title} />
+              <div className="portImgWrap">
+                <img src={project.img} alt={project.title} loading="lazy" />
               </div>
-              <div className="portfolio-content">
-                <h3>{project.title}</h3>
-                <p className="portfolio-subtitle">{project.subtitle}</p>
-                <div className="portfolio-actions">
-                  <span className="portfolio-link">
-                    View Details <span>→</span>
-                  </span>
+              <div className="portBody">
+                <h3 className="portTitle">{project.title}</h3>
+                <p className="portDesc">{project.description}</p>
+                <div className="portFooter">
+                  <div className="portTags">
+                    {project.categories.map((cat, i) => (
+                      <span className="portTag" key={i}>{cat}</span>
+                    ))}
+                  </div>
                   {project.link && (
                     <a
                       href={project.link}
-                      className="portfolio-visit"
+                      className="portVisit"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={e => e.stopPropagation()}
                     >
-                      Visit Site ↗
+                      Visit ↗
                     </a>
                   )}
                 </div>
@@ -199,8 +199,12 @@ const Portfolio = () => {
             </div>
             <div className="modal-info">
               <h3>{selectedProject.title}</h3>
-              <p className="modal-subtitle">{selectedProject.subtitle}</p>
               <p>{selectedProject.description}</p>
+              <div className="portTags" style={{marginTop: '1rem'}}>
+                {selectedProject.categories.map((cat, i) => (
+                  <span className="portTag" key={i}>{cat}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

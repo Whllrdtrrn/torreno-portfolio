@@ -7,6 +7,7 @@ const TARGETS = [
   "section > h2",
   ".aboutMe",
   ".aboutContent",
+  ".approachCard",
   ".skillCard",
   ".skillGroupTitle",
   ".workMarquee",

@@ -5,6 +5,7 @@ import Preloader from './components/preloader/Preloader'
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 import About from './components/about/about'
+import Approach from './components/approach/Approach'
 import Experience from './components/experience/experience'
 import Portfolio from './components/portfolio/portfolio'
 import Contact from './components/contact/contact'
@@ -22,6 +23,7 @@ const App = () => {
             <About/>
             <Experience/>
             <Portfolio/>
+            <Approach/>
             <Contact/>
             <Footer/>
         </>
