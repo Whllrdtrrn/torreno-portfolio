@@ -1,0 +1,73 @@
+/* ---- custom dot cursor ---- */
+.cursorDot,
+.cursorRing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cursorVisible {
+    opacity: 1;
+}
+
+/* Small dot — follows mouse instantly */
+.cursorDot {
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    margin-top: -4px;
+    background: var(--color-primary);
+}
+
+/* Outer ring — follows with lag */
+.cursorRing {
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+    margin-top: -18px;
+    border: 1.5px solid var(--color-primary);
+    transition: width 0.25s ease, height 0.25s ease,
+                margin 0.25s ease, opacity 0.3s ease,
+                background 0.25s ease, border-color 0.25s ease;
+}
+
+/* Hover state — ring grows and fills */
+.cursorDot.cursorHover {
+    opacity: 0;
+}
+.cursorRing.cursorHover {
+    width: 56px;
+    height: 56px;
+    margin-left: -28px;
+    margin-top: -28px;
+    background: rgba(77, 181, 255, 0.1);
+    border-color: var(--color-primary);
+}
+
+/* Hide default cursor globally */
+@media (pointer: fine) {
+    *,
+    *::before,
+    *::after {
+        cursor: none !important;
+    }
+}
+
+/* Don't show on touch/mobile */
+@media (pointer: coarse) {
+    .cursorDot,
+    .cursorRing {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cursorRing {
+        transition: none;
+    }
+}

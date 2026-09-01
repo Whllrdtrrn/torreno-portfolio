@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -9,54 +10,98 @@
 }
 
 :root{
-    --color-bg:#1f1f38;
-    --color-white:white;
-    --color-bg-variant:#2c2c6c;
-    --color-primary:#4db5ff;
+    --color-bg: #0b0b0b;
+    --color-bg-alt: #111111;
+    --color-bg-card: #161616;
+    --color-white: #ffffff;
+    --color-text: #b0b0b0;
+    --color-text-light: #888888;
+    --color-primary: #4db5ff;
+    --color-primary-dim: rgba(77, 181, 255, 0.12);
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-glass: rgba(255, 255, 255, 0.04);
+    --color-glass-border: rgba(255, 255, 255, 0.1);
 
-    --transition:all 400ms ease ;
+    --transition: all 400ms ease;
 
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-sm: 90%;
+    --container-width-lg: 1140px;
+    --container-width-md: 90%;
+    --container-width-sm: 92%;
 
-
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    /* background:var(--color-bg); */
-    color: var(--color-white);
-    background-color: black;
-    /* background-image: url(../src/assets/10.png) ; */
-    background-repeat: no-repeat, repeat;
-    background-size: 100%;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 
+}
+
+/* ============ glass card utility ============ */
+.glass {
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .container{
-    width: var(  --container-width-lg);
+    width: var(--container-width-lg);
+    max-width: var(--container-width-lg);
     margin: 0 auto;
+    padding: 0 1rem;
 }
 h1,h2,h3,h4,h5{
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+/* ============ section label (Weblance-style pill) ============ */
+.sectionLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    font-size: 0.85rem;
     font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 1.2rem;
+}
+.sectionLabel::before {
+    content: "✦";
+    color: var(--color-primary);
+    font-size: 0.7rem;
 }
 
 section{
-    margin-top: 8rem;
-    height: 100%;
-    padding-top: 4rem;
+    margin-top: 0;
+    padding: 5rem 0;
+    height: auto;
 }
-section >h2 , section>h5{
+section > h2, section > h5{
     text-align: center;
     color: var(--color-white);
 }
-section >h2 {
-    color: var(--color-primary);
+section > h5 {
+    display: none; /* replaced by sectionLabel */
+}
+section > h2 {
+    color: var(--color-white);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
     margin-bottom: 3rem;
 }
 .text-light{
-    color: var(--color-white);
+    color: var(--color-text-light);
 }
 a{
     color: var(--color-primary);
@@ -67,23 +112,34 @@ a:hover{
 }
 .btn{
     width: max-content;
-    display: block;
-    color: var(--color-primary);
-    padding: 0.75rem 1.2rem;
-    border-radius: 0.4;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-white);
+    padding: 0.75rem 1.6rem;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-glass-border);
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
     transition: var(--transition);
 }
 .btn:hover{
     background: var(--color-white);
     color: var(--color-bg);
-    border-color: transparent;
+    border-color: var(--color-white);
 }
 .btn-primary{
     background: var(--color-primary);
     color: var(--color-bg);
-
+    border-color: var(--color-primary);
+}
+.btn-primary:hover{
+    background: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-bg);
 }
 .img{
     display: block;
@@ -94,19 +150,17 @@ a:hover{
 @media screen and (max-width:1024px){
     .container{
         width: var(--container-width-md);
-
     }
     section{
-        margin-top: 6rem;
+        padding: 4rem 0;
     }
 }
 @media screen and (max-width:600px){
     .container{
         width: var(--container-width-sm);
-
     }
     section{
-        margin-top: 2rem;
+        padding: 3rem 0;
     }
 }
 
@@ -124,6 +178,18 @@ a:hover{
 
 .revealVisible {
     opacity: 1;
+    transform: none;
+}
+
+/* ---- directional variants ---- */
+.reveal.eduFromLeft {
+    transform: translateX(-50px);
+}
+.reveal.eduFromRight {
+    transform: translateX(50px);
+}
+.revealVisible.eduFromLeft,
+.revealVisible.eduFromRight {
     transform: none;
 }
 

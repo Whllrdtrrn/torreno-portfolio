@@ -1,64 +1,132 @@
-footer{
-    background: black;
-   border-top: 1px solid var(--color-primary);
-    text-align: center;
-    padding:  3rem 0;
-    font-size: 0.9rem;
-    margin-top: 7rem;
-
-
-}
-footer a{
-    color: var(--color-primary);
-}
-.footerLink{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0 auto 3rem;
-}
-.footerLogo{
-    color: aliceblue;
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
-    display: inline-block;
-}
-.socialFooter{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 4rem;
-}
-.socialFooter a{
+/* ============ Footer ============ */
+#footer {
     background: var(--color-bg);
-    color: white;
-    padding: 0.8rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 4rem;
+}
+
+.footerContainer {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* ---- brand column ---- */
+.footerLogo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+}
+.footerTagline {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+}
+.footerSocials {
     display: flex;
-    border: 1px solid transparent;
-    border-radius: 0.8rem;
-
-
+    gap: 0.6rem;
 }
-.socialFooter a:hover{
-    background: transparent;
+.footerSocials a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+.footerSocials a:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
     color: var(--color-bg);
-    border-color: var(--color-bg);
 }
-.footerCopy{
-    margin-bottom: 4rem;
-    cursor: default;
+
+/* ---- columns ---- */
+.footerCol {
+    padding-top: 0.5rem;
+}
+.footerColTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.footerCol ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.footerCol ul li a {
+    font-size: 0.88rem;
+    color: var(--color-text-light);
+    transition: var(--transition);
+}
+.footerCol ul li a:hover {
     color: var(--color-primary);
 }
 
+/* ---- contact list in footer ---- */
+.footerContactList li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.footerContactIcon {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+.footerContactList span {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
 
-@media screen and (max-width:600px){
-    .footerLink{
-        flex-direction: column;
-        gap: 1.5rem;
+/* ---- bottom bar ---- */
+.footerBottom {
+    border-top: 1px solid var(--color-border);
+    padding: 1.2rem 0;
+}
+.footerBottomInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerBottomInner small {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+}
+.footerCredit {
+    color: var(--color-primary) !important;
+}
+
+/* ============ responsive ============ */
+@media screen and (max-width: 1024px) {
+    .footerContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
     }
-    .socialFooter{
-        margin-bottom: 2.6rem;
+    .footerBrand {
+        grid-column: 1 / -1;
+    }
+}
+@media screen and (max-width: 600px) {
+    .footerContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footerBottomInner {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
     }
 }

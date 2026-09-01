@@ -3,14 +3,14 @@ import {useEffect} from "react";
 // Blocks that fade and rise into place as they enter the viewport. Grouped by
 // parent so siblings stagger instead of all arriving at once.
 const TARGETS = [
-  "section > h5",
+  ".sectionLabel",
   "section > h2",
   ".aboutMe",
   ".aboutContent",
-  ".exContainer > div",
-  ".exTimelineTitle",
-  ".exTimelineItem",
-  ".exEducationItem",
+  ".skillCard",
+  ".skillGroupTitle",
+  ".workMarquee",
+  ".eduRow",
   ".serviceCard",
   ".portCard",
   ".leftContact .details",

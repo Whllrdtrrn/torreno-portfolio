@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {MdOutlineEmail} from "react-icons/md";
-import {RiFacebookBoxFill} from "react-icons/ri";
 import {BsFillTelephoneFill} from "react-icons/bs";
+import {FaFacebookMessenger} from "react-icons/fa";
+import {HiLocationMarker} from "react-icons/hi";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 
-// EmailJS config. These are public-by-design identifiers (the "public key" is
-// safe to ship in the bundle). Override per-environment via .env if needed:
-//   REACT_APP_EMAILJS_SERVICE_ID / _TEMPLATE_ID / _PUBLIC_KEY
 const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_zql2vxp";
 const TEMPLATE_ID =
   process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_4c6bm0j";
@@ -19,7 +17,7 @@ const EMPTY_FORM = {name: "", email: "", message: ""};
 const Contact = () => {
   const [fields, setFields] = useState(EMPTY_FORM);
   const [isLoading, setIsLoading] = useState(false);
-  const [status, setStatus] = useState(null); // { type: 'success' | 'error', text }
+  const [status, setStatus] = useState(null);
 
   useEffect(() => {
     if (status) {
@@ -39,8 +37,6 @@ const Contact = () => {
     setStatus(null);
 
     try {
-      // Both naming conventions are sent so the EmailJS template works whether
-      // its fields reference {{name}}/{{email}} or {{from_name}}/{{reply_to}}.
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
@@ -59,19 +55,8 @@ const Contact = () => {
       });
       setFields(EMPTY_FORM);
     } catch (error) {
-      // EmailJS rejects with an EmailJSResponseStatus ({ status, text }).
-      // Log it so the real cause (bad key, missing template, quota, blocked
-      // origin) is visible in the console instead of being swallowed.
       console.error("EmailJS error:", error?.status, error?.text || error);
-
       const detail = error?.text || error?.message || "";
-      if (/strict mode/i.test(detail)) {
-        console.error(
-          'EmailJS strict mode is on. Uncheck "Use Private Key" at ' +
-            "https://dashboard.emailjs.com/admin/account/security — a private " +
-            "key must never be shipped in frontend code."
-        );
-      }
       setStatus({
         type: "error",
         text: detail
@@ -85,92 +70,110 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
+      <div className="container contactLayout">
+        {/* Left side — heading + info cards */}
+        <div className="contactLeft">
+          <span className="sectionLabel">Contact</span>
+          <h2 className="contactHeading">
+            Get In Touch<br />
+            <span className="contactHeadingLight">With Me</span>
+          </h2>
+          <p className="contactSubtext">
+            Fill out the form and I'll get back to you as soon as possible.
+          </p>
 
-      <div className="container contactContainer">
-        <div className="leftContact">
-          <article className="details">
-            <MdOutlineEmail className="contactIcon" />
-            <h4>Email</h4>
-            <h5>whillourdtorreno@gmail.com</h5>
-            <a
-              href="mailto:whillourdtorreno@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Send a message
-            </a>
-          </article>
-
-          <article className="details">
-            <RiFacebookBoxFill className="contactIcon" />
-            <h4>Facebook</h4>
-            <h5>Whillourd Torreno</h5>
-            <a
-              href="https://www.facebook.com/whllrdtrrn/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Send a message
-            </a>
-          </article>
-
-          <article className="details">
-            <BsFillTelephoneFill className="contactIcon" />
-            <h4>Phone</h4>
-            <h5>+63-967-213-5477</h5>
-            <a href="tel:+639672135477">Call me</a>
-          </article>
+          <div className="contactCards">
+            <div className="contactInfoCard">
+              <HiLocationMarker className="contactInfoIcon" />
+              <div>
+                <h4>Location</h4>
+                <p>Cavite City, Philippines</p>
+              </div>
+            </div>
+            <div className="contactInfoCard">
+              <BsFillTelephoneFill className="contactInfoIcon" />
+              <div>
+                <h4>Phone</h4>
+                <p>+63 967 213 5477</p>
+              </div>
+            </div>
+            <div className="contactInfoCard">
+              <MdOutlineEmail className="contactInfoIcon" />
+              <div>
+                <h4>Email</h4>
+                <p>whillourdtorreno@gmail.com</p>
+              </div>
+            </div>
+            <div className="contactInfoCard">
+              <FaFacebookMessenger className="contactInfoIcon" />
+              <div>
+                <h4>Messenger</h4>
+                <p>Whillourd Torreno</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="rightContact">
-          <form onSubmit={sendEmail}>
-            <input
-              type="text"
-              name="name"
-              value={fields.name}
-              onChange={handleChange}
-              placeholder="Your Full Name"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              value={fields.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              rows="7"
-              value={fields.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              required
-            ></textarea>
+        {/* Right side — form */}
+        <div className="contactRight">
+          <form onSubmit={sendEmail} className="contactForm">
+            <div className="contactFormRow">
+              <div className="contactFormGroup">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={fields.name}
+                  onChange={handleChange}
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div className="contactFormGroup">
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={fields.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="contactFormGroup">
+              <label>Message</label>
+              <textarea
+                name="message"
+                rows="6"
+                value={fields.message}
+                onChange={handleChange}
+                placeholder="Write your message..."
+                required
+              ></textarea>
+            </div>
 
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn btn-primary contactSubmitBtn"
               disabled={isLoading}
             >
               {isLoading ? "Sending..." : "Send Message"}
             </button>
           </form>
-
-          {status && (
-            <div
-              className={`status-message ${status.type}`}
-              role="status"
-              aria-live="polite"
-            >
-              {status.text}
-            </div>
-          )}
         </div>
       </div>
+
+      {status && (
+        <div
+          className={`status-message ${status.type}`}
+          role="status"
+          aria-live="polite"
+        >
+          {status.text}
+        </div>
+      )}
     </section>
   );
 };
