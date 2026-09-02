@@ -1,0 +1,84 @@
+/* ============ CTA Banner ============ */
+#cta-banner {
+    background: var(--color-bg-alt);
+    padding: 5rem 0;
+}
+
+.ctaContainer {
+    padding: 5rem 3rem;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, rgba(77, 181, 255, 0.08) 0%, rgba(77, 181, 255, 0.02) 100%);
+    border: 1px solid rgba(77, 181, 255, 0.12);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle glow behind */
+.ctaContainer::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(77, 181, 255, 0.1) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ctaContent {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ctaHeading {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+.ctaHighlight {
+    color: var(--color-primary);
+}
+
+.ctaText {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.ctaActions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.ctaBtn {
+    font-size: 0.95rem;
+    padding: 0.85rem 2rem;
+}
+.ctaBtnOutline {
+    font-size: 0.88rem;
+    color: var(--color-text-light);
+    border-color: var(--color-border);
+}
+.ctaBtnOutline:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: transparent;
+}
+
+/* ============ responsive ============ */
+@media screen and (max-width: 600px) {
+    .ctaContainer {
+        padding: 3rem 1.5rem;
+    }
+    .ctaActions {
+        flex-direction: column;
+        align-items: center;
+    }
+}

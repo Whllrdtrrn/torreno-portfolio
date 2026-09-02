@@ -121,6 +121,13 @@
 .portVisit:hover {
     color: var(--color-white);
 }
+.portNoLink {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    white-space: nowrap;
+    opacity: 0.6;
+}
 
 /* ============ Modal ============ */
 .modal-overlay {
@@ -138,12 +145,16 @@
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
-    max-width: 800px;
+    max-width: 720px;
     width: 100%;
     max-height: 90vh;
-    overflow-y: auto;
+    overflow: hidden;
     position: relative;
     animation: modalSlideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.modal-scroll {
+    max-height: 90vh;
+    overflow-y: auto;
 }
 @keyframes modalSlideIn {
     from { opacity: 0; transform: translateY(20px) scale(0.97); }
@@ -173,15 +184,15 @@
 .modal-image-container {
     width: 100%;
     overflow: hidden;
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
 }
 .modal-image-container img {
     width: 100%;
+    display: block;
     object-position: top;
     object-fit: cover;
 }
 .modal-info {
-    padding: 1.5rem 2rem 2rem;
+    padding: 2rem 2.5rem 2.5rem;
 }
 .modal-info h3 {
     color: var(--color-white);
@@ -193,6 +204,14 @@
     color: var(--color-text);
     line-height: 1.7;
     font-size: 0.95rem;
+}
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 /* ============ Responsive ============ */

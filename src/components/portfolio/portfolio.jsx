@@ -1,17 +1,17 @@
 import React, {useState} from "react";
-import IMG from "../../assets/Railway.JPG";
-import CrudPhp from "../../assets/crud-php.jpg";
-import Monitoring from "../../assets/monitoring.JPG";
-import Slmc from "../../assets/slmc-home.png";
-import Megaworld from "../../assets/megaworld-home.png";
-import Adb from "../../assets/Adb-home.png";
-import Cli from "../../assets/Cli-home.png";
-import AboitizLand from "../../assets/AboitizLand.png";
-import Aev from "../../assets/Aev.png";
-import Suntrust from "../../assets/Suntrust.png";
-import Petora from "../../assets/petora.png";
-import Robinson from "../../assets/robinson.png";
-import Snaboitiz from "../../assets/snaboitiz.png";
+import IMG from "../../assets/Railway.webp";
+import CrudPhp from "../../assets/crud-php.webp";
+import Monitoring from "../../assets/monitoring.webp";
+import Slmc from "../../assets/slmc-home.webp";
+import Megaworld from "../../assets/megaworld-home.webp";
+import Adb from "../../assets/Adb-home.webp";
+import Cli from "../../assets/Cli-home.webp";
+import AboitizLand from "../../assets/AboitizLand.webp";
+import Aev from "../../assets/Aev.webp";
+import Suntrust from "../../assets/Suntrust.webp";
+import Petora from "../../assets/petora.webp";
+import Robinson from "../../assets/robinson.webp";
+import Snaboitiz from "../../assets/snaboitiz.webp";
 
 import "./portfolio.css";
 
@@ -43,6 +43,7 @@ const data = [
     description:
       "Corporate website for a leading healthcare institution in the Philippines, known for world-class medical services and advanced technology.",
     categories: ["Healthcare"],
+    noLink: true,
   },
   {
     id: 3,
@@ -60,6 +61,7 @@ const data = [
     description:
       "Website for a leading multilateral development bank promoting sustainable and inclusive growth in Asia and the Pacific.",
     categories: ["Finance"],
+    noLink: true,
   },
   {
     id: 5,
@@ -86,6 +88,7 @@ const data = [
     description:
       "Corporate site for the public holding company of the Aboitiz Group with investments in power, banking, food, infrastructure, and DSAI.",
     categories: ["Conglomerate"],
+    noLink: true,
   },
   {
     id: 13,
@@ -169,7 +172,7 @@ const Portfolio = () => {
                       <span className="portTag" key={i}>{cat}</span>
                     ))}
                   </div>
-                  {project.link && (
+                  {project.link ? (
                     <a
                       href={project.link}
                       className="portVisit"
@@ -179,7 +182,9 @@ const Portfolio = () => {
                     >
                       Visit ↗
                     </a>
-                  )}
+                  ) : project.noLink ? (
+                    <span className="portNoLink">Not yet deployed</span>
+                  ) : null}
                 </div>
               </div>
             </article>
@@ -194,16 +199,31 @@ const Portfolio = () => {
             <button className="modal-close" onClick={() => setSelectedProject(null)}>
               ×
             </button>
-            <div className="modal-image-container">
-              <img src={selectedProject.img} alt={selectedProject.title} />
-            </div>
-            <div className="modal-info">
-              <h3>{selectedProject.title}</h3>
-              <p>{selectedProject.description}</p>
-              <div className="portTags" style={{marginTop: '1rem'}}>
-                {selectedProject.categories.map((cat, i) => (
-                  <span className="portTag" key={i}>{cat}</span>
-                ))}
+            <div className="modal-scroll">
+              <div className="modal-image-container">
+                <img src={selectedProject.img} alt={selectedProject.title} />
+              </div>
+              <div className="modal-info">
+                <h3>{selectedProject.title}</h3>
+                <p>{selectedProject.description}</p>
+                <div className="modal-footer">
+                  <div className="portTags">
+                    {selectedProject.categories.map((cat, i) => (
+                      <span className="portTag" key={i}>{cat}</span>
+                    ))}
+                  </div>
+                  {selectedProject.link && (
+                    <a
+                      href={selectedProject.link}
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{fontSize: '0.85rem', padding: '0.6rem 1.2rem'}}
+                    >
+                      Visit Site ↗
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>

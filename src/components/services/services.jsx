@@ -1,70 +1,59 @@
 import React from 'react'
-import{BsCheckLg} from 'react-icons/bs'
+import {HiCode, HiServer, HiDeviceMobile, HiCog} from 'react-icons/hi'
 import './services.css'
 
-const servicesData = [
+const services = [
     {
+        icon: HiCode,
         title: 'Frontend Development',
-        items: [
-            'Responsive, mobile-first interfaces with Tailwind CSS, SCSS, and Bootstrap',
-            'Single-page and server-rendered apps with React, Vue.js, Nuxt 3, and Next.js',
-            'Adobe XD and Figma designs converted into pixel-accurate, functional interfaces',
-            'Reusable component libraries and maintainable, well-structured codebases',
-            'Performance optimization: bundle size, lazy loading, and Core Web Vitals',
-            'Cross-browser and cross-device testing for consistent behavior',
-            'Accessible markup and semantic HTML5 throughout'
-        ]
+        description: 'Responsive, pixel-perfect interfaces built with React, Vue.js, Next.js, and Tailwind CSS. From design handoff to production-ready code.',
     },
     {
-        title: 'Backend & API Development',
-        items: [
-            'REST APIs with Laravel, Express.js, and Node.js',
-            'Normalized database schemas in MySQL and PostgreSQL',
-            'Optimized SQL queries for faster data retrieval and lower load',
-            'Prisma ORM data models, migrations, and type-safe queries',
-            'Stripe integration: checkout sessions, payment intents, subscriptions, and webhooks',
-            'Real-time features with Socket.io for chat and live updates',
-            'Authentication, authorization, and role-based access control'
-        ]
+        icon: HiServer,
+        title: 'Backend & API',
+        description: 'Scalable REST APIs and server-side logic with Laravel, Node.js, and PostgreSQL. Authentication, payments, and third-party integrations.',
     },
     {
-        title: 'Full-Stack Delivery',
-        items: [
-            'End-to-end product build-out from database design to deployed UI',
-            'Custom CMS development and third-party system integration',
-            'Deployment and hosting on DigitalOcean and Hostinger',
-            'Dockerized environments for consistent local and production setups',
-            'Code reviews, debugging, and performance tuning',
-            'Git-based workflows with clear branching and release practices',
-            'Ongoing maintenance, bug fixes, and feature enhancements'
-        ]
-    }
-];
+        icon: HiDeviceMobile,
+        title: 'Full-Stack Applications',
+        description: 'End-to-end web applications — database design, API development, frontend UI, deployment, and everything in between.',
+    },
+    {
+        icon: HiCog,
+        title: 'Maintenance & Support',
+        description: 'Ongoing bug fixes, performance optimization, feature updates, and server management to keep your product running smoothly.',
+    },
+]
 
-const services = () => {
-    return(
-        <section id='service'>
-            <h5>What I Offer</h5>
-            <h2>Services</h2>
+const Services = () => {
+    return (
+        <section id="services">
+            <div className="container">
+                <div className="servicesHeader">
+                    <span className="sectionLabel">Services</span>
+                    <h2 className="servicesHeading">What I Can Do For You</h2>
+                    <p className="servicesSubtext">
+                        From concept to deployment — I handle every layer of web development.
+                    </p>
+                </div>
 
-            <div className="container servicesContainer">
-                {servicesData.map((service, index) => (
-                    <article className='serviceCard' key={index}>
-                        <div className="serviceHead">
-                            <h3>{service.title}</h3>
-                        </div>
-                        <ul className='serviceList'>
-                            {service.items.map((item, i) => (
-                                <li key={i}>
-                                    <BsCheckLg className='serviceIcon' />
-                                    <p>{item}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </article>
-                ))}
+                <div className="servicesGrid">
+                    {services.map((service, index) => {
+                        const Icon = service.icon
+                        return (
+                            <article className="serviceCard" key={index}>
+                                <div className="serviceIconWrap">
+                                    <Icon className="serviceIcon" />
+                                </div>
+                                <h3 className="serviceTitle">{service.title}</h3>
+                                <p className="serviceDesc">{service.description}</p>
+                            </article>
+                        )
+                    })}
+                </div>
             </div>
         </section>
     )
 }
-export default services
+
+export default Services

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react'
 import './header.css'
-import ME from '../../assets/Togapic.jpg'
+import ME from '../../assets/Togapic.webp'
 import {FaGithub, FaLinkedinIn, FaBehance, FaFacebookF} from 'react-icons/fa'
 import * as THREE from 'three'
 
@@ -73,12 +73,24 @@ const Header = () => {
                         <div className="heroInfo">
                             <div className="heroAvailable">
                                 <span className="heroDot"></span>
-                                Available for Freelance
+                                Open to Opportunities
                             </div>
                             <p className="heroDesc">
                                 I design and build web applications that are fast,
                                 accessible, and built to last.
                             </p>
+                            <div className="heroQuickLinks">
+                                <a href="mailto:whillourdtorreno@gmail.com" className="heroEmail">
+                                    whillourdtorreno@gmail.com
+                                </a>
+                                <a
+                                    href={`${process.env.PUBLIC_URL}/Torreno_CV.pdf`}
+                                    className="heroCV"
+                                    download="Whil-Lourd-Torreno-CV.pdf"
+                                >
+                                    Download CV ↓
+                                </a>
+                            </div>
                             <div className="heroSocials">
                                 <a href="https://github.com/Whllrdtrrn" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub/></a>
                                 <a href="https://www.linkedin.com/in/whillourd-torreno-74429527b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn/></a>
@@ -89,10 +101,10 @@ const Header = () => {
 
                         <div className="heroCards">
                             <div className="heroCardCta glass">
-                                <h4>Start a Project</h4>
-                                <p>Stay updated with my latest projects and design insights.</p>
+                                <h4>Get In Touch</h4>
+                                <p>Looking for a full-time role or have a project in mind? Let's talk.</p>
                                 <a href="#contact" className="btn btn-primary heroHireBtn">
-                                    Let's Work Together <span className="heroArrow">→</span>
+                                    Let's Talk <span className="heroArrow">→</span>
                                 </a>
                             </div>
                             <div className="heroCardPhoto glass">

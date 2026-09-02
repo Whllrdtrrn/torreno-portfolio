@@ -1,5 +1,5 @@
 import React from "react";
-import ME from "../../assets/about.jpg";
+import ME from "../../assets/about.webp";
 import "./about.css";
 
 const About = () => {
@@ -33,25 +33,6 @@ const About = () => {
             solutions.
           </p>
 
-          <div className="aboutActions">
-            <a
-              href={`${process.env.PUBLIC_URL}/Torreno_CV.pdf`}
-              className="btn"
-              download="Whil-Lourd-Torreno-CV.pdf"
-            >
-              Download CV
-            </a>
-            <button
-              className="btn btn-primary"
-              onClick={() => {
-                document.getElementById("contact")?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }}
-            >
-              Let's Talk
-            </button>
-          </div>
         </div>
       </div>
     </section>

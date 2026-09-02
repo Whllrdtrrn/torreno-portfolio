@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/torreno-portfolio/static/css/main.1958f91c.css",
-    "main.js": "/torreno-portfolio/static/js/main.1aacb6f6.js",
-    "static/js/44.b1284cde.chunk.js": "/torreno-portfolio/static/js/44.b1284cde.chunk.js",
-    "static/media/Aev.png": "/torreno-portfolio/static/media/Aev.2203b6376e9180be2ac7.png",
-    "static/media/AboitizLand.png": "/torreno-portfolio/static/media/AboitizLand.67bbd86c45f4a613ba21.png",
-    "static/media/snaboitiz.png": "/torreno-portfolio/static/media/snaboitiz.161a2ba35c3c9dc32d1d.png",
-    "static/media/Cli-home.png": "/torreno-portfolio/static/media/Cli-home.bd431b99b122bfd87a58.png",
-    "static/media/slmc-home.png": "/torreno-portfolio/static/media/slmc-home.66a7d4a59353b72b4474.png",
-    "static/media/megaworld-home.png": "/torreno-portfolio/static/media/megaworld-home.9beb75a977b01e1802da.png",
-    "static/media/about.jpg": "/torreno-portfolio/static/media/about.0e8b853a3e37e8a0abdf.jpg",
-    "static/media/Togapic.jpg": "/torreno-portfolio/static/media/Togapic.d530269363a262b5a77a.jpg",
-    "static/media/Adb-home.png": "/torreno-portfolio/static/media/Adb-home.2c7bfbfb351d2ac3fcc4.png",
-    "static/media/Suntrust.png": "/torreno-portfolio/static/media/Suntrust.d8276dddaf9a4ed085bd.png",
-    "static/media/robinson.png": "/torreno-portfolio/static/media/robinson.bfb000372967073ae079.png",
-    "static/media/petora.png": "/torreno-portfolio/static/media/petora.225b44cb129602848464.png",
-    "static/media/Railway.JPG": "/torreno-portfolio/static/media/Railway.fcbf54e52bf7e8866b0b.JPG",
-    "static/media/crud-php.jpg": "/torreno-portfolio/static/media/crud-php.29a45c0194f3b217bb80.jpg",
-    "static/media/monitoring.JPG": "/torreno-portfolio/static/media/monitoring.2481d87f920a6abcd178.JPG",
+    "main.css": "/torreno-portfolio/static/css/main.1f0c03ab.css",
+    "main.js": "/torreno-portfolio/static/js/main.c1414cfa.js",
+    "static/js/44.3b523bac.chunk.js": "/torreno-portfolio/static/js/44.3b523bac.chunk.js",
+    "static/media/Aev.webp": "/torreno-portfolio/static/media/Aev.4180b3a27e3641bc4402.webp",
+    "static/media/AboitizLand.webp": "/torreno-portfolio/static/media/AboitizLand.36830a8d98a3d882e0d1.webp",
+    "static/media/Suntrust.webp": "/torreno-portfolio/static/media/Suntrust.c9d2253978bc6286a169.webp",
+    "static/media/about.webp": "/torreno-portfolio/static/media/about.36494cb2eeb53a0ee733.webp",
+    "static/media/Cli-home.webp": "/torreno-portfolio/static/media/Cli-home.cccd90f57c8b7e8b083a.webp",
+    "static/media/Adb-home.webp": "/torreno-portfolio/static/media/Adb-home.45b23f936bc597eb1f25.webp",
+    "static/media/Railway.webp": "/torreno-portfolio/static/media/Railway.ce73e3f500ac0306597b.webp",
+    "static/media/megaworld-home.webp": "/torreno-portfolio/static/media/megaworld-home.407c8ff3e8758d0559e8.webp",
+    "static/media/slmc-home.webp": "/torreno-portfolio/static/media/slmc-home.1069303c2c992b50ba79.webp",
+    "static/media/robinson.webp": "/torreno-portfolio/static/media/robinson.a04c077eef15a757c01e.webp",
+    "static/media/monitoring.webp": "/torreno-portfolio/static/media/monitoring.1e1d015d2ee75f2e91d1.webp",
+    "static/media/snaboitiz.webp": "/torreno-portfolio/static/media/snaboitiz.f73bce1b3847d4e62e9f.webp",
+    "static/media/Togapic.webp": "/torreno-portfolio/static/media/Togapic.dd803690639fd3beb2f2.webp",
+    "static/media/crud-php.webp": "/torreno-portfolio/static/media/crud-php.c4f6183e3fe2212c0d5e.webp",
+    "static/media/petora.webp": "/torreno-portfolio/static/media/petora.60e4d6a0f63826355c8e.webp",
     "index.html": "/torreno-portfolio/index.html",
-    "main.1958f91c.css.map": "/torreno-portfolio/static/css/main.1958f91c.css.map",
-    "main.1aacb6f6.js.map": "/torreno-portfolio/static/js/main.1aacb6f6.js.map",
-    "44.b1284cde.chunk.js.map": "/torreno-portfolio/static/js/44.b1284cde.chunk.js.map"
+    "main.1f0c03ab.css.map": "/torreno-portfolio/static/css/main.1f0c03ab.css.map",
+    "main.c1414cfa.js.map": "/torreno-portfolio/static/js/main.c1414cfa.js.map",
+    "44.3b523bac.chunk.js.map": "/torreno-portfolio/static/js/44.3b523bac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1958f91c.css",
-    "static/js/main.1aacb6f6.js"
+    "static/css/main.1f0c03ab.css",
+    "static/js/main.c1414cfa.js"
   ]
 }
