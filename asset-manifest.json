@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/torreno-portfolio/static/css/main.1f0c03ab.css",
-    "main.js": "/torreno-portfolio/static/js/main.c1414cfa.js",
+    "main.css": "/torreno-portfolio/static/css/main.f295dcbd.css",
+    "main.js": "/torreno-portfolio/static/js/main.9044ac32.js",
     "static/js/44.3b523bac.chunk.js": "/torreno-portfolio/static/js/44.3b523bac.chunk.js",
+    "static/media/callbackcv.png": "/torreno-portfolio/static/media/callbackcv.d641ba648dee8bf2f832.png",
+    "static/media/mateoclinic.png": "/torreno-portfolio/static/media/mateoclinic.b803360b7f3982de665e.png",
+    "static/media/anvesso.png": "/torreno-portfolio/static/media/anvesso.6963611892923558e016.png",
     "static/media/Aev.webp": "/torreno-portfolio/static/media/Aev.4180b3a27e3641bc4402.webp",
     "static/media/AboitizLand.webp": "/torreno-portfolio/static/media/AboitizLand.36830a8d98a3d882e0d1.webp",
     "static/media/Suntrust.webp": "/torreno-portfolio/static/media/Suntrust.c9d2253978bc6286a169.webp",
@@ -15,16 +18,17 @@
     "static/media/robinson.webp": "/torreno-portfolio/static/media/robinson.a04c077eef15a757c01e.webp",
     "static/media/monitoring.webp": "/torreno-portfolio/static/media/monitoring.1e1d015d2ee75f2e91d1.webp",
     "static/media/snaboitiz.webp": "/torreno-portfolio/static/media/snaboitiz.f73bce1b3847d4e62e9f.webp",
+    "static/media/ridewrap.webp": "/torreno-portfolio/static/media/ridewrap.aa66fb3a5b4d2e143eda.webp",
     "static/media/Togapic.webp": "/torreno-portfolio/static/media/Togapic.dd803690639fd3beb2f2.webp",
     "static/media/crud-php.webp": "/torreno-portfolio/static/media/crud-php.c4f6183e3fe2212c0d5e.webp",
     "static/media/petora.webp": "/torreno-portfolio/static/media/petora.60e4d6a0f63826355c8e.webp",
     "index.html": "/torreno-portfolio/index.html",
-    "main.1f0c03ab.css.map": "/torreno-portfolio/static/css/main.1f0c03ab.css.map",
-    "main.c1414cfa.js.map": "/torreno-portfolio/static/js/main.c1414cfa.js.map",
+    "main.f295dcbd.css.map": "/torreno-portfolio/static/css/main.f295dcbd.css.map",
+    "main.9044ac32.js.map": "/torreno-portfolio/static/js/main.9044ac32.js.map",
     "44.3b523bac.chunk.js.map": "/torreno-portfolio/static/js/44.3b523bac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f0c03ab.css",
-    "static/js/main.c1414cfa.js"
+    "static/css/main.f295dcbd.css",
+    "static/js/main.9044ac32.js"
   ]
 }
