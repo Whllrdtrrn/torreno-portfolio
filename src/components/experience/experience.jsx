@@ -8,14 +8,16 @@ import './experience.css'
 const workHistory = [
     {
         role: 'Full Stack Developer',
-        company: 'Petora (Project-Based)',
-        period: '11/2025 - 08/2026',
+        company: 'Razza Consulting (Project-Based)',
+        period: '10/2025 - 10/2026',
         location: 'Remote',
         points: [
-            'Developed a full-stack pet platform using React, Vite, and Tailwind CSS.',
-            'Built backend services using Express.js, Prisma ORM, and PostgreSQL.',
-            'Integrated Stripe for payments, subscriptions, marketplace commissions, and webhooks.',
-            'Developed features including marketplace, veterinary booking, pet hotel, adoption, community feed, events, and real-time chat using Socket.io.'
+            'Maintained and enhanced a production e-commerce platform (RideWrap) built on WordPress and Laravel within a monorepo architecture with Docker.',
+            'Developed and integrated REST APIs between WordPress and Laravel using OAuth2 (Passport) for cross-platform communication.',
+            'Built a real-time session tracking and event logging system using Firebase, TypeScript, and Service Workers.',
+            'Developed custom WordPress plugins for service logging, quality checking, and design file management.',
+            'Integrated WooCommerce REST API with Laravel for order processing, shipping, and inventory management.',
+            'Deployed updates to production via SiteGround and Bitbucket Pipelines CI/CD.'
         ]
     },
     {

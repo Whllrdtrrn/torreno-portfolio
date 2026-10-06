@@ -7,9 +7,11 @@ import {
     SiPython, SiCsharp, SiWordpress,
     SiMysql, SiPostgresql,
     SiGit, SiGithub, SiGitlab, SiBitbucket, SiDocker,
-    SiPostman, SiJira, SiDigitalocean, SiVercel, SiNetlify
+    SiPostman, SiJira, SiDigitalocean, SiVercel, SiNetlify,
+    SiFirebase, SiWoocommerce
 } from 'react-icons/si'
 import {FaJava} from 'react-icons/fa'
+import {AiOutlineApi} from 'react-icons/ai'
 import {HiViewGrid} from 'react-icons/hi'
 import {FaCode, FaPaintBrush, FaServer, FaDatabase, FaTools} from 'react-icons/fa'
 
@@ -42,6 +44,9 @@ const skills = [
     { name: 'Django', icon: SiDjango, color: '#092E20', category: 'Backend', level: 55 },
     { name: 'Spring Boot', icon: SiSpringboot, color: '#6DB33F', category: 'Backend', level: 55 },
     { name: 'WordPress', icon: SiWordpress, color: '#21759B', category: 'Backend', level: 70 },
+    { name: 'REST APIs', icon: AiOutlineApi, color: '#06B6D4', category: 'Backend', level: 85 },
+    { name: 'WooCommerce', icon: SiWoocommerce, color: '#96588A', category: 'Backend', level: 75 },
+    { name: 'Firebase', icon: SiFirebase, color: '#FFCA28', category: 'Backend', level: 75 },
 
     // Database
     { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1', category: 'Database', level: 85 },
