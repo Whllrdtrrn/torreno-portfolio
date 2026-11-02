@@ -8,10 +8,12 @@ import {
     SiMysql, SiPostgresql,
     SiGit, SiGithub, SiGitlab, SiBitbucket, SiDocker,
     SiPostman, SiJira, SiDigitalocean, SiVercel, SiNetlify,
-    SiFirebase, SiWoocommerce
+    SiFirebase, SiWoocommerce,
+    SiPrisma, SiStripe, SiSocketdotio, SiRedis, SiExpress, SiNestjs,
+    SiExpo, SiOpenai
 } from 'react-icons/si'
 import {FaJava} from 'react-icons/fa'
-import {AiOutlineApi} from 'react-icons/ai'
+import {AiOutlineApi, AiOutlineRobot} from 'react-icons/ai'
 import {HiViewGrid} from 'react-icons/hi'
 import {FaCode, FaPaintBrush, FaServer, FaDatabase, FaTools} from 'react-icons/fa'
 
@@ -47,6 +49,14 @@ const skills = [
     { name: 'REST APIs', icon: AiOutlineApi, color: '#06B6D4', category: 'Backend', level: 85 },
     { name: 'WooCommerce', icon: SiWoocommerce, color: '#96588A', category: 'Backend', level: 75 },
     { name: 'Firebase', icon: SiFirebase, color: '#FFCA28', category: 'Backend', level: 75 },
+    { name: 'Express.js', icon: SiExpress, color: '#ffffff', category: 'Backend', level: 80 },
+    { name: 'NestJS', icon: SiNestjs, color: '#E0234E', category: 'Backend', level: 75 },
+    { name: 'Prisma', icon: SiPrisma, color: '#2D3748', category: 'Backend', level: 85 },
+    { name: 'Socket.io', icon: SiSocketdotio, color: '#010101', category: 'Backend', level: 75 },
+    { name: 'Stripe', icon: SiStripe, color: '#635BFF', category: 'Backend', level: 75 },
+    { name: 'Redis', icon: SiRedis, color: '#DC382D', category: 'Backend', level: 65 },
+    { name: 'LLM Integration', icon: AiOutlineRobot, color: '#10A37F', category: 'Backend', level: 70 },
+    { name: 'React Native', icon: SiExpo, color: '#000020', category: 'Frontend', level: 70 },
 
     // Database
     { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1', category: 'Database', level: 85 },
