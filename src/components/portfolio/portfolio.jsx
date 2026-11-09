@@ -27,7 +27,7 @@ const data = [
     img: RideWrap,
     title: "RideWrap",
     description:
-      "A production e-commerce platform for bike protection products, built on WordPress and Laravel within a monorepo architecture with Docker. Features integrated REST APIs, real-time session tracking, and WooCommerce for order processing, shipping, and inventory management.",
+      "A production e-commerce platform for bike protection products. Features integrated cross-platform REST APIs, real-time session tracking and analytics, custom plugins for operations workflow, and e-commerce integration for order processing, shipping, and inventory management.",
     categories: ["E-Commerce"],
     link: "https://www.ridewrap.com/",
   },
@@ -35,11 +35,7 @@ const data = [
     id: 15,
     img: CallbackCV,
     title: "CallbackCV",
-    description: `A full-stack ATS-friendly resume builder for the Philippine job market. Features 76 designer 
-    templates, live ATS scoring, tracked resume links, video intros with virtual backgrounds, cover   
-    letters, email signatures, and a built-in PDF editor. Built with Next.js 15, React 19, TypeScript,
-    Prisma + SQLite, Tailwind CSS, and Playwright for PDF generation. Payments via PayMongo (GCash,
-    Maya, cards).`,
+    description: `A full-stack ATS-friendly resume builder for the Philippine job market. Features 76 designer templates, live ATS scoring with 35 rules, tracked resume links with view analytics, video intros with virtual backgrounds, cover letters, email signatures, and a built-in PDF editor. Includes custom authentication, payment processing, and automated PDF generation.`,
     categories: ["SaaS", "Resume Builder"],
     link: "https://web-production-fa8e2.up.railway.app/", // wala pang live link kasi local pa lang
   },
@@ -47,12 +43,7 @@ const data = [
     id: 16,
     img: MateoDentalClinic,
     title: "Mateo Dental Clinic",
-    description: `A full-stack dental clinic management and online booking platform for Mateo
-    Dental Clinic. Features appointment scheduling, patient records with dental charting,
-    AI-powered chat receptionist, invoicing with PayMongo payments, SMS/email reminders,
-    treatment plans, prescriptions, equipment tracking, and a customizable landing page CMS.
-    Built with Next.js 15, React 19, TypeScript, Prisma + PostgreSQL, Tailwind CSS, and
-    Anthropic Claude AI. Single-tenant deployment of the Petora Smile SaaS platform.`,
+    description: `A full-stack dental clinic management and online booking platform. Features appointment scheduling, patient records with dental charting, AI-powered chat receptionist, invoicing with online payments, SMS/email reminders, treatment plans, prescriptions, equipment tracking, and a customizable landing page CMS. 7 user roles with granular permissions.`,
     categories: ["SaaS", "Healthcare"],
     link: "https://mateo-dental.vercel.app/",
   },
@@ -60,10 +51,7 @@ const data = [
     id: 17,
     img: Anvesso,
     title: "FitPass (Anvesso)",
-    description: `AI-powered active lifestyle platform for the Philippines. Discover and book gyms,
-    studios, courts, coaches, and recovery services nearby — then track workouts, nutrition,
-    and body progress in one app. Built with NestJS, React Native (Expo), Next.js, PostgreSQL +
-    PostGIS, and Redis.`,
+    description: `AI-powered active lifestyle platform for the Philippines. Discover and book gyms, studios, courts, coaches, and recovery services nearby — then track workouts, nutrition, and body progress in one app. Modular monolith backend with 32 bounded contexts, event-driven architecture, and geo-search.`,
     categories: ["Health & Fitness", "SaaS"],
     link: "https://fitpass-web-jade.vercel.app/",
   },
@@ -72,7 +60,7 @@ const data = [
     img: Petora,
     title: "Petora",
     description:
-      "A full-stack pet platform with marketplace, vet booking, pet hotel reservations, adoption system, community feed, and real-time chat. Powered by Stripe payments and Socket.io.",
+      "A full-stack pet platform with marketplace, vet booking, pet hotel reservations, adoption system, community feed, and real-time chat. Features split payments with seller commissions, real-time messaging, and 5 user roles.",
     categories: ["Pet Platform"],
     link: "https://www.petora.com.ph/",
   },

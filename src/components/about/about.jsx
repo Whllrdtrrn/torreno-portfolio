@@ -20,17 +20,10 @@ const About = () => {
           </h2>
 
           <p>
-            Full Stack Web Developer with 3+ years of experience building
-            responsive web applications and REST APIs using React, Next.js,
-            Vue.js, Laravel, PHP, and JavaScript. Experienced in frontend and
-            backend development, database management, API integrations, and
-            third-party services, with knowledge of workflow automation.
+            Full Stack Developer with 4+ years of experience delivering production web applications, e-commerce platforms, and SaaS products for enterprise and corporate clients.
           </p>
           <p>
-            I've successfully delivered multiple projects, including a full-stack
-            pet platform with Stripe payments and real-time chat, corporate web
-            applications for property and banking clients, and custom CMS
-            solutions.
+            I build across the full stack — from database design and API development to responsive UI implementation and cloud deployment. I've shipped platforms with payment integrations, real-time features, AI-powered systems, and CI/CD pipelines for both enterprise clients and personal projects.
           </p>
 
         </div>

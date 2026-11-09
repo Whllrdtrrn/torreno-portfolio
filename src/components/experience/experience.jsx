@@ -8,16 +8,16 @@ import './experience.css'
 const workHistory = [
     {
         role: 'Full Stack Developer',
-        company: 'Razza Consulting (Project-Based)',
+        company: 'Razza Consulting',
         period: '10/2025 - 10/2026',
         location: 'Remote',
         points: [
-            'Maintained and enhanced a production e-commerce platform (RideWrap) built on WordPress and Laravel within a monorepo architecture with Docker.',
-            'Developed and integrated REST APIs between WordPress and Laravel using OAuth2 (Passport) for cross-platform communication.',
-            'Built a real-time session tracking and event logging system using Firebase, TypeScript, and Service Workers.',
-            'Developed custom WordPress plugins for service logging, quality checking, and design file management.',
-            'Integrated WooCommerce REST API with Laravel for order processing, shipping, and inventory management.',
-            'Deployed updates to production via SiteGround and Bitbucket Pipelines CI/CD.'
+            'Maintained and enhanced a production e-commerce platform within a monorepo architecture with containerized development.',
+            'Developed and integrated cross-platform REST APIs using OAuth2 for secure communication between two separate codebases.',
+            'Built a real-time session tracking and event logging system for user analytics across the storefront.',
+            'Developed custom plugins for service logging, quality checking, and design file management.',
+            'Integrated e-commerce REST API with internal backend for order processing, shipping, and inventory management.',
+            'Deployed updates to production via CI/CD pipelines with staging and production branch workflow.'
         ]
     },
     {
@@ -25,12 +25,12 @@ const workHistory = [
         company: 'DesignBlue Manila Corp',
         period: '10/2023 - 10/2025',
         points: [
-            'Developed responsive web interfaces using Tailwind CSS and JavaScript.',
-            'Built web applications using Laravel and Nuxt 3.',
-            'Converted Adobe XD designs into responsive and functional web pages.',
-            'Developed and integrated databases and APIs.',
-            'Optimized SQL queries and application performance to improve efficiency and maintainability.',
-            'Managed DigitalOcean deployments and performed debugging, code reviews, and performance improvements.'
+            'Developed responsive web interfaces and built web applications for 9+ enterprise clients.',
+            'Converted design mockups into pixel-perfect, responsive web pages across all device sizes.',
+            'Built custom CMS for corporate websites, allowing clients to manage content without developer intervention.',
+            'Developed and integrated databases and REST APIs for dynamic content and data management.',
+            'Optimized database queries and application performance to improve efficiency and maintainability.',
+            'Managed cloud deployments and performed debugging, code reviews, and performance improvements.'
         ]
     },
     {
@@ -38,10 +38,11 @@ const workHistory = [
         company: 'Sun Moon Technology',
         period: '05/2022 - 03/2023',
         points: [
-            'Developed full-stack solutions, including database design and API development.',
-            'Designed normalized database schemas and implemented optimized SQL queries to improve data retrieval speed and application performance.',
-            'Managed DigitalOcean deployments for secure and reliable hosting.',
-            'Conducted code reviews, debugging, and performance tuning to ensure high-quality deliverables.'
+            'Developed full-stack web applications with admin dashboards, CRUD modules, and content management.',
+            'Designed normalized database schemas and wrote optimized queries for reporting and data retrieval.',
+            'Built RESTful APIs with authentication for frontend and third-party consumption.',
+            'Managed cloud server infrastructure and deployment workflows for secure production hosting.',
+            'Conducted code reviews, debugging, and performance profiling to resolve bottlenecks.'
         ]
     }
 ]

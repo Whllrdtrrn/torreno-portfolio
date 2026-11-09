@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/torreno-portfolio/static/css/main.f295dcbd.css",
-    "main.js": "/torreno-portfolio/static/js/main.ea44601b.js",
+    "main.css": "/torreno-portfolio/static/css/main.3e9c5f55.css",
+    "main.js": "/torreno-portfolio/static/js/main.314ab13c.js",
     "static/js/44.3b523bac.chunk.js": "/torreno-portfolio/static/js/44.3b523bac.chunk.js",
     "static/media/Togapic.webp": "/torreno-portfolio/static/media/Togapic.9ad634c56c94dbdde7ab.webp",
     "static/media/callbackcv.png": "/torreno-portfolio/static/media/callbackcv.d641ba648dee8bf2f832.png",
@@ -23,12 +23,12 @@
     "static/media/crud-php.webp": "/torreno-portfolio/static/media/crud-php.c4f6183e3fe2212c0d5e.webp",
     "static/media/petora.webp": "/torreno-portfolio/static/media/petora.60e4d6a0f63826355c8e.webp",
     "index.html": "/torreno-portfolio/index.html",
-    "main.f295dcbd.css.map": "/torreno-portfolio/static/css/main.f295dcbd.css.map",
-    "main.ea44601b.js.map": "/torreno-portfolio/static/js/main.ea44601b.js.map",
+    "main.3e9c5f55.css.map": "/torreno-portfolio/static/css/main.3e9c5f55.css.map",
+    "main.314ab13c.js.map": "/torreno-portfolio/static/js/main.314ab13c.js.map",
     "44.3b523bac.chunk.js.map": "/torreno-portfolio/static/js/44.3b523bac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f295dcbd.css",
-    "static/js/main.ea44601b.js"
+    "static/css/main.3e9c5f55.css",
+    "static/js/main.314ab13c.js"
   ]
 }

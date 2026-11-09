@@ -6,12 +6,12 @@ const services = [
     {
         icon: HiCode,
         title: 'Frontend Development',
-        description: 'Responsive, pixel-perfect interfaces built with React, Vue.js, Next.js, and Tailwind CSS. From design handoff to production-ready code.',
+        description: 'Responsive, pixel-perfect interfaces from design handoff to production-ready code. Cross-browser compatible and optimized for all devices.',
     },
     {
         icon: HiServer,
         title: 'Backend & API',
-        description: 'Scalable REST APIs and server-side logic with Laravel, Node.js, and PostgreSQL. Authentication, payments, and third-party integrations.',
+        description: 'Scalable REST APIs and server-side logic with authentication, payments, and third-party integrations. Database design and query optimization.',
     },
     {
         icon: HiDeviceMobile,
